@@ -56,9 +56,31 @@ public class Main {
 
         cities.addAll(villages);
 
+        System.out.println(cities); // 1st method
+        cities.remove(6);
+        System.out.println("deleting 7th element");
+        System.out.println(cities); // 1st method
+        System.out.println(cities.indexOf("Grazdorf"));
+
+        System.out.println("\n\n\n\n\nA3");
+        System.out.println("before");
+        System.out.println(cities);
+        updateElement(cities, "Linz", "Wr. Neustadt");
+        System.out.println("after");
+        System.out.println(cities);
+        cities.remove(3);
+        System.out.println("before sorting");
+        System.out.println(cities);
+        Collections.sort(cities);
+        System.out.println("reverse sorting ...");
+        Collections.sort(cities,Collections.reverseOrder());
+        System.out.println("after sorting");
         System.out.println(cities);
 
-
-
     }
+    public static void updateElement(ArrayList al, String find, String replacement) {
+        int index = al.indexOf(find);
+        al.set(index, replacement);
+    }
+
 }
