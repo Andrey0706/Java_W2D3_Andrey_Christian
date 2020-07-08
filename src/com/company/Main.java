@@ -18,23 +18,29 @@ public class Main {
             System.out.println(i);
         }
 
-        ArrayList<String> temperature = new ArrayList<String>();
-        temperature.add("19");
-        temperature.add("17");
-        temperature.add("11");
-        temperature.add("34");
-        temperature.add("23");
-        temperature.add("7");
+        ArrayList<Integer> temperature = new ArrayList<Integer>();
+        temperature.add(19);
+        temperature.add(17);
+        temperature.add(11);
+        temperature.add(34);
+        temperature.add(23);
+        temperature.add(7);
 
-        for(String i : temperature){
-            System.out.println(i);
+        //for(String i : temperature){
+        //    System.out.println(i);
+        //}
+
+        //cities.addAll(temperature);
+
+        //for(String i : cities){
+        //    System.out.println(i);
+        //}
+        City[] city_array = new City[cities.size()];
+        for (int i = 0; i < cities.size(); i++ ) {
+            city_array[i] = new City(cities.get(i), temperature.get(i));
         }
-
-        cities.addAll(temperature);
-
-        for(String i : cities){
-            System.out.println(i);
+        for (City city : city_array) {
+            city.printOut();
         }
-
     }
 }
