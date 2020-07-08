@@ -77,6 +77,24 @@ public class Main {
         System.out.println("after sorting");
         System.out.println(cities);
 
+
+        ArrayList<City2> federal_states = new ArrayList<City2>();
+        federal_states.add(new City2("Niederosterreich", 100000));
+        federal_states.add(new City2("Wien", 2000000));
+        federal_states.add(new City2("Burgenland", 1952222));
+        federal_states.add(new City2("Tirol", 231566));
+        federal_states.add(new City2("Voralberg", 56000));
+        federal_states.add(new City2("Oberosterreich", 100000));
+        federal_states.add(new City2("Steiermark", 100000));
+        federal_states.add(new City2("Kartner", 26000));
+        federal_states.add(new City2("Salzburg", 150000));
+
+        for(City2 obj : federal_states){
+            System.out.println(obj.name + obj.inhabitants);
+        }
+
+
+
     }
     public static void updateElement(ArrayList al, String find, String replacement) {
         int index = al.indexOf(find);
