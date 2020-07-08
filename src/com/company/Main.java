@@ -79,18 +79,20 @@ public class Main {
 
 
         ArrayList<City2> federal_states = new ArrayList<City2>();
-        federal_states.add(new City2("Niederosterreich", 100000));
-        federal_states.add(new City2("Wien", 2000000));
-        federal_states.add(new City2("Burgenland", 1952222));
-        federal_states.add(new City2("Tirol", 231566));
-        federal_states.add(new City2("Voralberg", 56000));
-        federal_states.add(new City2("Oberosterreich", 100000));
-        federal_states.add(new City2("Steiermark", 100000));
-        federal_states.add(new City2("Kartner", 26000));
-        federal_states.add(new City2("Salzburg", 150000));
+
+        federal_states.add(new City2("Niederosterreich", "St POlten"));
+        federal_states.add(new City2("Wien", "Wien"));
+        federal_states.add(new City2("Burgenland", "Eisenstadt"));
+        federal_states.add(new City2("Tirol", "Insbruck"));
+        federal_states.add(new City2("Voralberg", "Bregenz"));
+        federal_states.add(new City2("Oberosterreich", "Linz"));
+        federal_states.add(new City2("Steiermark", "Graz"));
+        federal_states.add(new City2("Kartner", "Klagenfurt"));
+        federal_states.add(new City2("Salzburg", "Salzburg"));
+
 
         for(City2 obj : federal_states){
-            System.out.println(obj.name + obj.inhabitants);
+            System.out.println("The federal state of " + obj.federal_state + " has capital " + obj.capital);
         }
 
 
