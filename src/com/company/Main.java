@@ -80,20 +80,31 @@ public class Main {
 
         ArrayList<City2> federal_states = new ArrayList<City2>();
 
-        federal_states.add(new City2("Niederosterreich", "St POlten"));
-        federal_states.add(new City2("Wien", "Wien"));
-        federal_states.add(new City2("Burgenland", "Eisenstadt"));
-        federal_states.add(new City2("Tirol", "Insbruck"));
-        federal_states.add(new City2("Voralberg", "Bregenz"));
-        federal_states.add(new City2("Oberosterreich", "Linz"));
-        federal_states.add(new City2("Steiermark", "Graz"));
-        federal_states.add(new City2("Kartner", "Klagenfurt"));
-        federal_states.add(new City2("Salzburg", "Salzburg"));
+        federal_states.add(new City2("Niederosterreich", "St POlten", 435435));
+        federal_states.add(new City2("Wien", "Wien",2321321));
+        federal_states.add(new City2("Burgenland", "Eisenstadt",213213));
+        federal_states.add(new City2("Tirol", "Insbruck",23213213));
+        federal_states.add(new City2("Voralberg", "Bregenz",34343));
+        federal_states.add(new City2("Oberosterreich", "Linz",21321321));
+        federal_states.add(new City2("Steiermark", "Graz",12321321));
+        federal_states.add(new City2("Kartner", "Klagenfurt",213213));
+        federal_states.add(new City2("Salzburg", "Salzburg",123213));
 
 
         for(City2 obj : federal_states){
-            System.out.println("The federal state of " + obj.federal_state + " has capital " + obj.capital);
+            System.out.println(obj);
         }
+        AustrianCities ac = new AustrianCities(federal_states);
+        seperator();
+        ac.printCityNames();
+        seperator();
+        ac.printCityCitizenNumbers();
+        seperator();
+        ac.printAllCityData();
+        seperator();
+        ac.printTotalNumberOfCitizens();
+
+
 
 
 
@@ -101,6 +112,9 @@ public class Main {
     public static void updateElement(ArrayList al, String find, String replacement) {
         int index = al.indexOf(find);
         al.set(index, replacement);
+    }
+    public static void seperator() {
+        System.out.println("\n\n#########################################\n\n");
     }
 
 }
