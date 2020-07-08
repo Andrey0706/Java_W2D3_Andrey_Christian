@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -42,5 +43,22 @@ public class Main {
         for (City city : city_array) {
             city.printOut();
         }
+
+        Collections.sort(cities);
+        for(String i : cities){
+            System.out.println(i);
+        }
+
+        ArrayList<String> villages = new ArrayList<String>();
+        villages.add("Viennadorf");
+        villages.add("Grazdorf");
+        villages.add("Linzdorf");
+
+        cities.addAll(villages);
+
+        System.out.println(cities);
+
+
+
     }
 }
