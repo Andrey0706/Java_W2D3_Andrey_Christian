@@ -21,6 +21,6 @@ public class City2 {
         return citizens;
     }
     public String toString() {
-        return "The federal state of " + federal_state + " has capital " + capital;
+        return "\nThe federal state of " + federal_state + " has capital " + capital + " with a population of " + citizens + "\n";
     }
 }

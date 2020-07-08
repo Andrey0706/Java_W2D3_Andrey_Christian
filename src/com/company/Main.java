@@ -103,10 +103,20 @@ public class Main {
         ac.printAllCityData();
         seperator();
         ac.printTotalNumberOfCitizens();
-
-
-
-
+        seperator();
+        System.out.println("Sorting by citizens number ascending");
+        System.out.println(federal_states);
+        Collections.sort(federal_states, new SortByCitizensAsc());
+        System.out.println(federal_states);
+        System.out.println("Sorting by citizens number descending");
+        Collections.sort(federal_states, new SortByCitizensDesc());
+        System.out.println(federal_states);
+        System.out.println("Sorting by cityname number ascending");
+        Collections.sort(federal_states, new SortByCityAsc());
+        System.out.println(federal_states);
+        System.out.println("Sorting by cityname number descending");
+        Collections.sort(federal_states, new SortByCityDesc());
+        System.out.println(federal_states);
 
     }
     public static void updateElement(ArrayList al, String find, String replacement) {
