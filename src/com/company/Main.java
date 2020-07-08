@@ -118,6 +118,15 @@ public class Main {
         Collections.sort(federal_states, new SortByCityDesc());
         System.out.println(federal_states);
 
+        Car car1 = new Car("Audi", "A4", 4, 220, true);
+        ElectroCar electroCar1 = new ElectroCar("Telsa", "Model S", 4, 310, true);
+        Bike bike1 = new Bike("Harley", "BlaBla", 2, 350, "mountain");
+        Bicycle bicycle1 = new Bicycle("KTM", "Allmountain2000", 2, 390, "All Terain");
+        System.out.println(car1);
+        System.out.println(electroCar1);
+        System.out.println(bike1);
+        System.out.println(bicycle1);
+
     }
     public static void updateElement(ArrayList al, String find, String replacement) {
         int index = al.indexOf(find);
